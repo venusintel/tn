@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Tony Space Didactic Training</title>
+        <style>
+            body{
+                font-family: Sans-Serif;
+            }
+        </style>
+    </head>
+    <body>
+        <!--<h3>เอกสารประกอบการอบรม Wecon IIoT</h3>
+        <a href="https://drive.google.com/drive/folders/1U-vHf2VCl6rW26_cq9986-4F0U_3b8S2?usp=sharing" target="_blank">https://drive.google.com/drive/folders/1U-vHf2VCl6rW26_cq9986-4F0U_3b8S2?usp=sharing</a>
+        <p>=========================================================================</p>-->
+        <h3>เอกสารประกอบการอบรม Tony Space Didactic RMUTL DSK</h3>
+        <a href="https://drive.google.com/file/d/1q_zeA9J9aHql97VS_S8stVWYZX-dHQ44/view?usp=sharing" target="_blank">https://drive.google.com/file/d/1q_zeA9J9aHql97VS_S8stVWYZX-dHQ44/view?usp=sharing</a>
+        <p>=========================================================================</p>
+        <!--<h3>คลิปอบรม Tony Space Didactic ออนไลน์</h3>-->
+        <!--<a href="https://www.youtube.com/playlist?list=PLAGbopVT7SJuTeWCrupEd86KP1UeE5xaJ" target="_blank">https://www.youtube.com/playlist?list=PLAGbopVT7SJuTeWCrupEd86KP1UeE5xaJ</a>-->
+        <!--<p>=========================================================================</p>-->
+        <!--<h3>คลิปอบรม NI Elvis III ออนไลน์</h3>-->
+        <!--<a href="https://www.youtube.com/playlist?list=PLAGbopVT7SJuxp99CBbCGNiaHS_eTPupE" target="_blank">https://www.youtube.com/playlist?list=PLAGbopVT7SJuxp99CBbCGNiaHS_eTPupE</a>-->
+        <!--<p>=========================================================================</p>-->
+        <!--<h3>คลิปอบรม NI myRIO ออนไลน์</h3>-->
+        <!--<a href="https://www.youtube.com/playlist?list=PLAGbopVT7SJtV15w2CIO55bXGfp-Fqml5" target="_blank">https://www.youtube.com/playlist?list=PLAGbopVT7SJtV15w2CIO55bXGfp-Fqml5</a>-->
+        <!--<p>=========================================================================</p>-->
+        <h3>ESP32 URL</h3>
+        <a href="https://dl.espressif.com/dl/package_esp32_index.json" target="_blank">https://dl.espressif.com/dl/package_esp32_index.json</a>
+        <p>=========================================================================</p>
+        <h3>Tony Space Library</h3>
+        <a href="https://github.com/TonySpaceLtd/TonyS" target="_blank">https://github.com/TonySpaceLtd/TonyS</a>
+        <p>=========================================================================</p>
+        <h3>2.4TFT with LVGL Wi-Fi MQTT Publish Example Code</h3>
+        <a href="https://github.com/Venus-Solutions/training-sht31-lvgl-24lcd-wifi-mqtt-publish" target="_blank">https://github.com/Venus-Solutions/training-sht31-lvgl-24lcd-wifi-mqtt-publish</a>
+        <p>=========================================================================</p>
+        <h3>Line Notify URL</h3>
+        <a href="https://notify-bot.line.me/en/" target="_blank">https://notify-bot.line.me/en/</a><br />
+        <a href="https://notify-api.line.me/api/notify" target="_blank">https://notify-api.line.me/api/notify</a>
+        <p>=========================================================================</p>
+        <h3>Line Notify message</h3>
+        msg.headers = {<br />
+            'content-type' : 'application/x-www-form-urlencoded',<br />
+            'Authorization' : 'Bearer *****Your Token*****'<br />
+        }<br />
+        msg.payload = {<br />
+            'message' : msg.payload,<br />
+            'stickerPackageId' : 446,<br />
+            'stickerId' : 1988<br />
+        }<br />
+        return msg;<br />
+        <p>=========================================================================</p>
+        <h3>List of Available Stickers</h3>
+        <a href="https://developers.line.biz/en/docs/messaging-api/sticker-list/" target="_blank">https://developers.line.biz/en/docs/messaging-api/sticker-list/</a>
+        <p>=========================================================================</p>
+        <h3>Firebase SDK</h3>
+        src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"<br />
+        <p>=========================================================================</p>
+        <h3>Firebase Stream</h3>
+        Firebase.setStreamCallback(stream, streamCallback, streamTimeoutCallback);<br />
+        Firebase.beginStream(stream, "control/");<br />
+        <p>=========================================================================</p>
+        <h3>StreamCallback Function</h3>
+        void streamCallback(StreamData data){<br />
+            if(data.dataPath() == "/relay1"){<br />
+                Tony.digitalWrite(Relay_1, data.boolData());{<br />
+            }<br />
+            if(data.dataPath() == "/relay2"){<br />
+                Tony.digitalWrite(Relay_1, data.boolData());{<br />
+            }<br />
+        }<br />
+        <p>=========================================================================</p>
+        <h3>StreamTimeoutCallback Function</h3>
+        void streamTimeoutCallback(bool timeout){<br />
+            if(timeout){<br />
+                Serial.println("Stream timed out, resume streaming...");<br />
+            }<br />
+        }<br />
+        <p>=========================================================================</p>
+        <h3>Chart Example</h3>
+        const ctx = document.getElementById('myChart').getContext('2d');<br />
+        const myChart = new Chart(ctx, {<br />
+            type: 'line',<br />
+                data: {<br />
+                    labels: ['จันทร์', 'อังคาร', 'พุธ', 'พฤหัส', 'ศุกร์', 'เสาร์', 'อาทิตย์'],<br />
+                    datasets: [{<br />
+                    label: 'ข้อมูลชุดที่ 1',<br />
+                    data: [10, 20, 30, 40, 30, 20, 10],<br />
+                    backgroundColor: 'rgba(54, 162, 235, 1)',<br />
+                    borderColor: 'rgba(54, 162, 235, 1)',<br />
+                    borderWidth: 3<br />
+                },<br />
+                {<br />
+                    label: 'ข้อมูลชุดที่ 2',<br />
+                    data: [10, 30, 10, 40, 10, 50, 10],<br />
+                    backgroundColor: 'rgba(255, 206, 86, 1)',<br />
+                    borderColor: 'rgba(255, 206, 86, 1)',<br />
+                    borderWidth: 3<br />
+                }]<br />
+            },<br />
+        });<br />
+        <p>=========================================================================</p>
+        <h3>Chart Option</h3>
+        options: {<br />
+            scales: {<br />
+                y: {<br />
+                    beginAtZero: true,<br />
+                    grid: {<br />
+                        color: 'rgba(255, 255, 255, 0.2)'<br />
+                    },<br />
+                    ticks: {<br />
+                        color: 'white'<br />
+                    },<br />
+                },<br />
+                x: {<br />
+                    ticks: {<br />
+                        color: 'white'<br />
+                    }<br />
+                }<br />
+            },<br />
+            plugins: {<br />
+                title: {<br />
+                    display: true,<br />
+                    text: '***ชื่อแผนภูมิ***',<br />
+                    color: 'white',<br />
+                },<br />
+                legend: {<br />
+                    labels: {<br />
+                        color: 'white'<br />
+                    }<br />
+                }<br />
+            },<br />
+        }<br />
+        <p>=========================================================================</p>
+        <h3>Math Random Array</h3>
+        const temp = Array(20).fill().map(function rand() {<br />
+            return Math.random() * 20 + 20;<br />
+        })<br />
+        const humi = Array(20).fill().map(function rand() {<br />
+            return Math.random() * 30 + 50;<br />
+        })<br />
+        <p>=========================================================================</p>
+        <h3>20 Points Label</h3>
+        labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],<br />
+        <p>=========================================================================</p>
+        <h3>onValue Event Update Chart</h3>
+        let tempPoint, humiPoint;<br />
+        let refTemp = firebase.database().ref("***key ของอุณหภูมิ***");<br />
+        refTemp.on("value", function (dataSnapshot) {<br />
+            let childData = dataSnapshot.val();<br />
+            tempPoint = childData.toPrecision(4);<br />
+            document.getElementById("***id ของอุณหภูมิ***").innerHTML = tempPoint;<br />
+        });<br />
+        let refHumi = firebase.database().ref("***key ของความชื้น***");<br />
+        refHumi.on("value", function (dataSnapshot) {<br />
+            let childData = dataSnapshot.val();<br />
+            humiPoint = childData.toPrecision(4);<br />
+            document.getElementById("***id ของความชื้น***").innerHTML = humiPoint;<br />
+            updateChart();<br />
+        });<br />
+        <p>=========================================================================</p>
+        <h3>onValue Event Update Chart - Firebase v.9 modular</h3>
+        let tempPoint, humiPoint;<br />
+        const db = getDatabase();<br/>
+        const refTemp = ref(db, "***key ของอุณหภูมิ***");<br/>
+        onValue(refTemp, function (snapshot) {<br/>
+            let childData = snapshot.val();<br/>
+            tempPoint = childData.toPrecision(4);<br/>
+            document.getElementById("***id ของอุณหภูมิ***").innerHTML = tempPoint;<br/>
+        });<br/>
+        const refHumi = ref(db, "***key ของความชื้น***");<br/>
+        onValue(refHumi, function (snapshot) {<br/>
+            let childData = snapshot.val();<br/>
+            humiPoint = childData.toPrecision(4);<br/>
+            document.getElementById("***id ของความชื้น***").innerHTML = humiPoint;<br/>
+            updateChart();<br/>
+        });<br/>
+        <p>=========================================================================</p>
+        <h3>Web App Manifest</h3>
+        <a href="https://manifest-gen.netlify.app/" target="_blank">https://manifest-gen.netlify.app/</a><br />
+        <a href="https://seochecker.it/web-app-manifest-generator" target="_blank">https://seochecker.it/web-app-manifest-generator</a><br />
+        &lt;link rel="manifest" href="/manifest.json"&gt;<br />
+        <p>=========================================================================</p>
+        <h3>Firebase V.9 Modular Web Application Example Code</h3>
+        <a href="https://github.com/Venus-Solutions/training-firebase-web-application" target="_blank">https://github.com/Venus-Solutions/training-firebase-web-application</a><br />
+        <p>=========================================================================</p>
+    </body>
+</html>
