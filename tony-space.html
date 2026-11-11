@@ -62,10 +62,10 @@
         <h3>StreamCallback Function</h3>
         void streamCallback(StreamData data){<br />
             if(data.dataPath() == "/relay1"){<br />
-                Tony.digitalWrite(Relay_1, data.boolData());{<br />
+                Tony.digitalWrite(Relay_1, data.boolData());<br />
             }<br />
             if(data.dataPath() == "/relay2"){<br />
-                Tony.digitalWrite(Relay_1, data.boolData());{<br />
+                Tony.digitalWrite(Relay_2, data.boolData());<br />
             }<br />
         }<br />
         <p>=========================================================================</p>
